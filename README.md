@@ -32,8 +32,11 @@ module "zones" {
       }
     }
 
-    "myapp.com" = {
-      comment = "myapp.com"
+    "my-private-app.com" = {
+      comment = "my-private-app.com"
+      vpc = {
+        vpc_id = "vpc-0c1234ab08b5b4cce"
+      }
     }
   }
 }

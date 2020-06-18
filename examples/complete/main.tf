@@ -14,7 +14,10 @@ module "zones" {
     }
 
     "app.terraform-aws-modules-example.com" = {
-      comment = "app.terraform-aws-modules-example.com"
+      comment = "app.terraform-aws-modules-example.com (private)"
+      vpc = {
+        vpc_id = "vpc-0c1234ab08b5b4cce"
+      }
       tags = {
         Name = "app.terraform-aws-modules-example.com"
       }

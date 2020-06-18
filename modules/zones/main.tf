@@ -6,9 +6,9 @@ resource "aws_route53_zone" "this" {
   force_destroy = lookup(each.value, "force_destroy", false)
 
   //  delegation_set_id = ""
-  //  vpc {
-  //    vpc_id = ""
-  //  }
+  vpc {
+    vpc_id = null
+  }
 
   tags = lookup(each.value, "tags", null)
 }
